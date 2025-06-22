@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test - E-commerce</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #2a2a2a;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+        }
+        
+        .logo {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .nav-link {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #cccccc;
+            position: relative;
+            transition: color 0.2s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            z-index: 10;
+            pointer-events: auto;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-link.active {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .section {
+            height: 100vh;
+            padding: 100px 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        #home { background: #2a2a2a; }
+        #products { background: #3a3a3a; }
+        #about { background: #4a4a4a; }
+        #contact { background: #5a5a5a; }
+        
+        .test-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 2000;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <div>Navigation Test</div>
+        <div id="clickCount">Clicks: 0</div>
+    </div>
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="#" class="logo">TechStore</a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h1>Home Section</h1>
+    </section>
+    
+    <section id="products" class="section">
+        <h1>Products Section</h1>
+    </section>
+    
+    <section id="about" class="section">
+        <h1>About Section</h1>
+    </section>
+    
+    <section id="contact" class="section">
+        <h1>Contact Section</h1>
+    </section>
+
+    <script>
+        let clickCount = 0;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Navigation test page loaded');
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            console.log('Found nav links:', navLinks.length);
+            
+            navLinks.forEach((link, index) => {
+                console.log(`Setting up nav link ${index + 1}:`, link.textContent);
+                
+                link.addEventListener('click', function(e) {
+                    clickCount++;
+                    document.getElementById('clickCount').textContent = `Clicks: ${clickCount}`;
+                    
+                    console.log('Nav link clicked:', this.textContent);
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const targetId = this.getAttribute('href');
+                    console.log('Target ID:', targetId);
+                    
+                    const targetElement = document.querySelector(targetId);
+                    console.log('Target element found:', !!targetElement);
+                    
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        console.log('Scrolling to position:', offsetPosition);
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active nav link
+                        navLinks.forEach(navLink => {
+                            navLink.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    } else {
+                        console.error('Target element not found for:', targetId);
+                    }
+                });
+                
+                // Add hover effect for testing
+                link.addEventListener('mouseenter', function() {
+                    console.log('Mouse entered:', this.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
