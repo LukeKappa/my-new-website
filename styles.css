@@ -25,6 +25,32 @@
     --space-lg: 6rem;
 }
 
+/* ===== ANIMATED GRID BACKGROUND ===== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
 /* ===== RESET & BASE STYLES ===== */
 * {
     margin: 0;
@@ -204,7 +230,6 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--dark-color);
     position: relative;
     padding: 0 2rem;
 }

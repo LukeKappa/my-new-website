@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional photographer portfolio showcasing stunning photography work">
+    <title>Sarah Chen Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Meslo:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SARAH CHEN</div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>CAPTURING MOMENTS</h1>
+            <p>Professional photography with a minimalist approach to storytelling</p>
+            <div class="cta-buttons">
+                <a href="#gallery" class="btn primary-btn">VIEW GALLERY</a>
+                <a href="#contact" class="btn secondary-btn">BOOK SESSION</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <div class="placeholder-text">PHOTOGRAPHER PORTRAIT</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>ABOUT SARAH CHEN</h2>
+                    <p>With over 8 years of experience behind the lens, I specialize in capturing authentic moments that tell your unique story. My passion lies in creating timeless images that evoke emotion and preserve precious memories.</p>
+                    <p>Based in Cape Town, I work with clients across South Africa, offering a range of photography services from intimate portraits to grand celebrations.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">HAPPY CLIENTS</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">YEARS EXPERIENCE</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">EVENTS CAPTURED</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">PORTFOLIO GALLERY</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="portraits">PORTRAITS</button>
+                <button class="filter-btn" data-filter="events">EVENTS</button>
+                <button class="filter-btn" data-filter="nature">NATURE</button>
+                <button class="filter-btn" data-filter="weddings">WEDDINGS</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="portraits">
+                    <div class="gallery-img">
+                        <div class="img-placeholder portrait-1">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-img">
+                        <div class="img-placeholder event-1">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-img">
+                        <div class="img-placeholder nature-1">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="weddings">
+                    <div class="gallery-img">
+                        <div class="img-placeholder wedding-1">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="portraits">
+                    <div class="gallery-img">
+                        <div class="img-placeholder portrait-2">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-img">
+                        <div class="img-placeholder nature-2">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-img">
+                        <div class="img-placeholder event-2">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="weddings">
+                    <div class="gallery-img">
+                        <div class="img-placeholder wedding-2">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="portraits">
+                    <div class="gallery-img">
+                        <div class="img-placeholder portrait-3">
+                            <div class="overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">PHOTOGRAPHY SERVICES</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>PORTRAIT PHOTOGRAPHY</h3>
+                    <p>Professional headshots, family portraits, and creative personal branding sessions with a focus on natural expression and minimal styling.</p>
+                    <div class="service-price">FROM R800</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>WEDDING PHOTOGRAPHY</h3>
+                    <p>Complete wedding coverage from engagement to reception with elegant storytelling and timeless imagery.</p>
+                    <div class="service-price">FROM R5000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>EVENT PHOTOGRAPHY</h3>
+                    <p>Corporate events, parties, and special occasions captured with style and professional attention to detail.</p>
+                    <div class="service-price">FROM R1200</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">GET IN TOUCH</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>STUDIO LOCATION</h3>
+                            <p>Cape Town, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>EMAIL</h3>
+                            <p>sarah@sarahchenphotography.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>PHONE</h3>
+                            <p>+27 82 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>BUSINESS HOURS</h3>
+                            <p>Mon-Fri: 9AM-6PM<br>Sat: 10AM-4PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="YOUR EMAIL" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">SELECT SERVICE</option>
+                                <option value="portrait">PORTRAIT PHOTOGRAPHY</option>
+                                <option value="wedding">WEDDING PHOTOGRAPHY</option>
+                                <option value="event">EVENT PHOTOGRAPHY</option>
+                                <option value="other">OTHER</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" name="date" placeholder="PREFERRED DATE">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="TELL ME ABOUT YOUR VISION..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>SARAH CHEN PHOTOGRAPHY</h3>
+                    <p>Capturing life's beautiful moments, one frame at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>FOLLOW ME</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SARAH CHEN PHOTOGRAPHY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
